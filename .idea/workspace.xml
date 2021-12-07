@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5526d0b6-ca0b-43a3-8955-1eb86f50fc24" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/NetworkI_part1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NetworkI_part1/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetworkI_part1/src/main/java/part1/P2P.form" beforeDir="false" afterPath="$PROJECT_DIR$/NetworkI_part1/src/main/java/part1/P2P.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetworkI_part1/src/main/java/part1/P2P.java" beforeDir="false" afterPath="$PROJECT_DIR$/NetworkI_part1/src/main/java/part1/P2P.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetworkI_part1/target/classes/part1/P2P$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/NetworkI_part1/target/classes/part1/P2P$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetworkI_part1/target/classes/part1/P2P$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/NetworkI_part1/target/classes/part1/P2P$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetworkI_part1/target/classes/part1/P2P$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/NetworkI_part1/target/classes/part1/P2P$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetworkI_part1/target/classes/part1/P2P$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/NetworkI_part1/target/classes/part1/P2P$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetworkI_part1/target/classes/part1/P2P$P2PUDP.class" beforeDir="false" afterPath="$PROJECT_DIR$/NetworkI_part1/target/classes/part1/P2P$P2PUDP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetworkI_part1/target/classes/part1/P2P.class" beforeDir="false" afterPath="$PROJECT_DIR$/NetworkI_part1/target/classes/part1/P2P.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetworkI_part1/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/NetworkI_part1/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetworkI_part1/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/NetworkI_part1/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="219gGFAJnGWiIOFysL5L1F6FqFw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5526d0b6-ca0b-43a3-8955-1eb86f50fc24" name="Default Changelist" comment="" />
+      <created>1637358628811</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637358628811</updated>
+      <workItem from="1637358635753" duration="17000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

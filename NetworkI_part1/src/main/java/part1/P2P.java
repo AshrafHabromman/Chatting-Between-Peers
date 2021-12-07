@@ -66,11 +66,12 @@ public class P2P extends javax.swing.JFrame {
         Scanner scanner = new Scanner(new FileInputStream("IPs.txt"));
 
         while (scanner.hasNextLine()) {
-            listModel.addElement(scanner.nextLine());
+            listModel.addElement(scanner.nextLine());   
         }
         scanner.close();
 
         Userlist.setModel(listModel);
+        //System.out.println("JList item size: " + Userlist.getModel().getSize());
         //
         
         //start running to recive masgs 
@@ -147,7 +148,8 @@ public class P2P extends javax.swing.JFrame {
             }
         });
 
-        TestBtn.setText("TEST");
+        TestBtn.setText("Send Group");
+        TestBtn.setActionCommand("Send Group");
         TestBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TestBtnActionPerformed(evt);
@@ -312,7 +314,7 @@ public class P2P extends javax.swing.JFrame {
                 msge=MsgetxtF.getText();
                 msge=UserName+" : "+msge;
                 
-                p2pudp.SendData(RemoteIP, RemotePort, msge);
+                p2pudp.SendData(RemoteIP, RemotePort, msge,0);
                 //StatustxtF.setText("sent");
                 
             }//end of inner else
@@ -322,18 +324,45 @@ public class P2P extends javax.swing.JFrame {
 
     private void TestBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TestBtnActionPerformed
         // TODO add your handling code here:
-//        if(LocalPorttxtF.getText().equals("")){
-//            StatustxtF.setText("There is no port for Datagram socket :(");
-//        }else{
-//            LocalPort=Integer.parseInt(LocalPorttxtF.getText());
-//            
-//            
-//        }
+        
+        for (int i = 0; i < Userlist.getModel().getSize(); i++) {
+            Object item = Userlist.getModel().getElementAt(i);
+            String [] UserArr=String.valueOf(item).split(",");
+            
+            StatustxtF.setText("Sending...");
+            if(MsgetxtF.getText().equals("")){//if there is no massege to be sent 
+                StatustxtF.setText("There is no message");
+            }else{
+                if(remoteIPtxtF.getText().equals("")||remoteIPtxtF.getText().equals("")){//if there is no reciver info
+                    StatustxtF.setText("Please choose your friend :)");
+                }else{
+                    StatustxtF.setText("try to send");
+                    LocalIP=LocalIPtxtF.getText().trim();
+                    LocalPort=Integer.parseInt(LocalPorttxtF.getText().trim());
+        
+                    RemoteIP=remoteIPtxtF.getText().trim();
+                    RemotePort=Integer.parseInt(RemotePorttxtF.getText().trim());
+        
+                    UserName=UserNametxtF.getText();
+                    msge=MsgetxtF.getText();
+                    msge=UserName+" : "+msge;
+                    if(i == (Userlist.getModel().getSize()-1) )
+                        p2pudp.SendData(UserArr[0], Integer.parseInt(UserArr[1]), msge , 0);
+                    else
+                        p2pudp.SendData(UserArr[0], Integer.parseInt(UserArr[1]), msge , 1);
+                    //StatustxtF.setText("sent");
+                }//end of inner else
+            }//end of outer else
+               
+        }//end for loop 
+        
     }//GEN-LAST:event_TestBtnActionPerformed
 
     private void UserlistMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserlistMouseClicked
         // TODO add your handling code here:
-        remoteIPtxtF.setText(Userlist.getSelectedValue());
+        String [] UserInfo=Userlist.getSelectedValue().split(",");
+        remoteIPtxtF.setText(UserInfo[0]);
+        RemotePorttxtF.setText(UserInfo[1]);
     }//GEN-LAST:event_UserlistMouseClicked
 
     /**
@@ -440,7 +469,7 @@ public class P2P extends javax.swing.JFrame {
             thread.start();
         }
         
-        public void SendData(String IP,int Port, String msg){
+        public void SendData(String IP,int Port, String msg,int flag){
             try {
                 //DatagramSocket clientSocket = new DatagramSocket();
                 InetAddress IPAddress = InetAddress.getByName(IP);
@@ -451,7 +480,9 @@ public class P2P extends javax.swing.JFrame {
                 serverSocket.send(sendPacket);
                 
                 StatustxtF.setText("the message was sent");
-                MsgetxtF.setText("");
+                
+                if(flag==0)
+                    MsgetxtF.setText("");
                 
                 String m=msg+"\n";
                 appendToPane(MsgTxtarea,m,Color.blue);
